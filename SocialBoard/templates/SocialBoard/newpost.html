@@ -1,0 +1,11 @@
+{% for p in posts %}
+<fieldset class="posts">
+    <legend>
+        <p class="postdate" id="date">{{p.publish_date|date:"d/M/Y"}}</p>
+    </legend>
+        <div class="post_title">{{p.title}}</div>
+        <div class="post_content">{{p.content}}</div>
+        <div class="post_author">{{p.author}}</div>
+</fieldset>
+
+{% endfor %}

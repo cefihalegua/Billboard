@@ -1,0 +1,18 @@
+{% extends 'SocialBoard/index.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'SocialBoard/css/styles.css' %}">
+
+
+{% block content %}
+<div class="register_form">
+<p>Already have an account?
+    <a href="{% url 'login' %}">Login</a>
+</p>
+<h1>Create an account</h1>
+<form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create the account">
+</form>
+    </div>
+{% endblock %}

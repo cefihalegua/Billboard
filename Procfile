@@ -1,0 +1,1 @@
+web: gunicorn SocialBoard.wsgi --log-file -

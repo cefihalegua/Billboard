@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../../../AssignmentBillboard/.idea/AssignmentBillboard.iml" filepath="$PROJECT_DIR$/../../../../AssignmentBillboard/.idea/AssignmentBillboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../öğretmenin haftalık projesi/.idea/mybillboard.iml" filepath="$PROJECT_DIR$/../../../../öğretmenin haftalık projesi/.idea/mybillboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/starex1.iml" filepath="$PROJECT_DIR$/.idea/starex1.iml" />
+    </modules>
+  </component>
+</project>

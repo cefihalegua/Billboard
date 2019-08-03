@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Pinyon+Script|Poiret+One');
+
+#BILLBOARD {
+  font-family: 'Anton', sans-serif;
+  font-size: 40px;
+  color: black;
+  text-align: center;
+  padding: 50px;
+}
+
+div.login_block {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+
+#newpostform textarea,
+input {
+  margin: 4px;
+  font-size: 16px;
+  font0family: arial;
+}
+
+textarea {
+  height: 100px;
+  width: 100%;
+}
+
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#greeting {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  color: #0C1342;
+}
+
+p#logout-tab {
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  border: 2px solid #0C1342;
+  border-radius: 10px;
+  color: #0C1342;
+  text-decoration: none;
+  padding: 1vw;
+}
+
+a {
+  text-decoration: none;
+  color: #0C1342;
+}
+
+#newpostform {
+  display: none;
+  min-width: 300px;
+
+}
+
+
+.posts {
+  height: auto;
+  border: 3px solid #00b7ef;
+  margin-bottom: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 3%;
+  padding-right: 3%;
+  min-width: 300px;
+  width: 70vw;
+}
+
+.centered-elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postdate {
+  font-family: 'Poiret One', cursive;
+  font-size: 16px;
+  color: black;
+  padding-left: 4%;
+}
+
+.post_title {
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+  color: #00b7ef;
+}
+
+.post_content {
+  font-family: 'Arial';
+  font-size: 16px;
+  color: #c1bfc0;
+}
+
+.post_author {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 24px;
+  color: black;
+  float: right;
+}
+
+#author {
+  float: right;
+}
+
+#ask_to_add,
+#addpost {
+  background-color: #66CDAA;
+  font-size: 16px;
+  color: white;
+  border-radius: 3px;
+  padding: 2% 7%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#plus {
+  display: flex;
+  justify-content: center;
+  animation: .8s infinite beatHeart;
+}
+
+
+.newpost_buttons {
+  display: flex;
+  justify-content: center;
+  border: 1px dashed black;
+    margin-bottom: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3%;
+    padding-right: 3%;
+    min-width: 300px;
+    width: 70vw;
+
+}
+
+#close {
+  background-color: red;
+  font-size: 16px;
+  color: white;
+  border-radius: 3px;
+  padding: 2% 7%;
+  margin: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+.register_form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.register_form ul,
+.helptext {
+  display: none
+}
+
+legend .postdate {
+  padding: 0;
+}
+
+.new_post {
+  border: 3px dashed #00b7ef;
+  margin-bottom: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3%;
+    padding-right: 3%;
+    min-width: 300px;
+    width: 70vw;
+}
+
+@keyframes pulse_animation {
+	0% { transform: scale(1); }
+	30% { transform: scale(1); }
+	40% { transform: scale(1.08); }
+	50% { transform: scale(1); }
+	60% { transform: scale(1); }
+	70% { transform: scale(1.05); }
+	80% { transform: scale(1); }
+	100% { transform: scale(1); }
+}
+
+@keyframes beat_animation {
+	0% { transform: scale(1); }
+	20% { transform: scale(1); }
+	30% { transform: scale(1.08); }
+	40% { transform: scale(1); }
+	60% { transform: scale(1); }
+	70% { transform: scale(1.05); }
+	80% { transform: scale(1); }
+	100% { transform: scale(1); }
+}
+
+
+.pulse {
+	animation-name: pulse_animation;
+	animation-duration: 4000ms;
+	transform-origin:70% 70%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.beat:hover{
+animation-name: beat_animation;
+	animation-duration: 2000ms;
+	transform-origin:70% 70%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}

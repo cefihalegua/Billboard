@@ -1,0 +1,75 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Billboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'SocialBoard/css/styles.css' %}">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="{% static 'SocialBoard/js/app.js' %}"></script>
+</head>
+
+<body>
+<div class="centered-elements">
+
+    <div id="BILLBOARD">BILLBOARD</div>
+
+    {% block content %}
+    {% if user.is_authenticated %}
+
+    <p id="greeting"> Hello {{ user }} </p>
+    <p id="logout-tab"><a href="{% url 'logout' %}">Logout</a></p>
+
+    {% if posts %}
+
+
+        {% include 'SocialBoard/newpost.html' %}
+
+        {% else %}
+
+        <div> Sorry, no posts here! Click the '+' button to add a new post!</div>
+
+
+        {% endif %}
+
+
+
+        <div class="newpost_buttons beat" id="plus">
+            <i class="pulse" id="ask_to_add">+</i>
+        </div>
+
+        <div id="newpostform">
+
+
+        <form action="/newpost" method="post">
+
+                <fieldset class="new_post">
+                    <legend>
+                        <p class="postdate" id="date">TODAY</p>
+                    </legend>
+                    {% csrf_token %}
+                    <div><input type="text" name="title" id="title"  placeholder="Title" required></div>
+                    <textarea rows="7" name="content" id="content" value="content"
+                        placeholder="Your post here..." required></textarea>
+                    <div><input type="text" name="author" id="author" placeholder="Author" required></div>
+                </fieldset>
+                        <div class="newpost_buttons">
+                        <div class="beat" id='close'><i class="fa fa-times" ></i></div>
+                        <button type="submit" class="beat" id='addpost'><i class="fa fa-check"></i></button>
+                    </div>
+
+            </form>
+
+        </div>
+
+
+        {% endif %}
+
+        {% endblock %}
+    </div>
+    <script src="{% static 'SocialBoard/js/app.js' %}"></script>
+</body>
+
+</html>
